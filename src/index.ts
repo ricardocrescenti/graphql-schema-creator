@@ -6,6 +6,7 @@ import { ForeignKey } from './models/foreign-key';
 import { IResolverArg, Resolver } from './models/resolver';
 import { ResolverRequest } from './models/resolver-request';
 import { Table } from './models/table';
+import { UniqueKey } from './models/unique-key';
 
 type GraphQLFunction = (parent: any, args: any, context: any, info: any) => any;
 type PermissionFunction = (resolver: ResolverRequest) => any;
@@ -647,3 +648,12 @@ export function reduceArray<T>(array: T[], separator: string, convert: (item: an
       }
     });
 }
+
+export {
+  Column,
+  ForeignKey,
+  ResolverRequest,
+  Resolver,
+  Table,
+  UniqueKey
+};
