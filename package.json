@@ -1,0 +1,51 @@
+{
+  "name": "graphql-schema-creator",
+  "version": "0.1.0",
+  "description": "Automatically create a GraphQL API based on your database structure.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "link": "npm run build && npm run lint && npm run test && npm link",
+    "publish": "npm run build && npm run lint && npm run test && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardocrescenti/graphql-schema-creator.git"
+  },
+  "keywords": [
+    "graphql",
+    "schema",
+    "express",
+    "api"
+  ],
+  "author": {
+    "name": "Ricardo Crescenti",
+    "email": "ricardo.crescenti@gmail.com",
+    "url": "https://github.com/ricardocrescenti"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/ricardocrescenti/graphql-schema-creator/issues"
+  },
+  "homepage": "https://github.com/ricardocrescenti/graphql-schema-creator#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/graphql-type-json": "^0.3.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "apollo-server-express": "^2.9.12",
+    "graphql-type-json": "^0.3.1",
+    "jest": "^24.9.0",
+    "knex": "^0.20.2",
+    "knex-json-where": "^1.2.1",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.3"
+  }
+}
