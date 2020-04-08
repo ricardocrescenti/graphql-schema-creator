@@ -1,6 +1,6 @@
 import { AuthenticationError, gql } from 'apollo-server-express';
 import { GraphQLJSON } from 'graphql-type-json';
-import Knex from "knex";
+import * as Knex from "knex";
 import { Column } from './models/column';
 import { ForeignKey } from './models/foreign-key';
 import { IResolverArg, Resolver } from './models/resolver';

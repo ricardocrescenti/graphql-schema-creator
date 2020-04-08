@@ -1,4 +1,4 @@
-import Knex from "knex";
+import * as Knex from "knex";
 import { jsonWhere } from 'knex-json-where';
 
 import { GraphQLSchema, reduceArray } from "..";
