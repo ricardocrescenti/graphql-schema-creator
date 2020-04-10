@@ -5,12 +5,12 @@
   "main": "lib/index.js",
   "types": "lib/index.d.js",
   "scripts": {
-    "test": "jest --config jestconfig.json",
-    "build": "tsc",
     "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "link": "npm run build && npm run lint && npm run test && npm link",
-    "publish": "npm run build && npm run lint && npm run test && npm publish"
+    "build": "tsc && npm run lint && npm run test && npm link",
+    "link": "npm run build && npm link",
+    "publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
