@@ -53,6 +53,7 @@ export class Column {
         if (!type) {
             type = ({
             'bigint': 'Int',
+            'bool': 'Boolean',
             'boolean': 'Boolean',
             'char': 'String',
             'character': 'String',
