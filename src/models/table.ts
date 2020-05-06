@@ -154,7 +154,7 @@ export class Table {
         
         await this.processTableEvents<EventArgFunction<ResolverRequest, any, void>>(request.table.beforeUpdate, (event) => event(request, currentRecord[0]));
         currentRecord = await request.table.createDefaultUpdate(request.database, request.trx as Knex.Transaction, where, request.args.data);
-        await this.processTableEvents<EventArgFunction<ResolverRequest, any, void>>(request.table.afterUpdate, (event) => event(request, currentRecord));
+        await this.processTableEvents<EventArgFunction<ResolverRequest, any, void>>(request.table.afterUpdate, (event) => event(request, (currentRecord.length > 0 ? currentRecord[0] : null)));
       
       } else {
         
