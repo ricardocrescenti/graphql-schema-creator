@@ -67,6 +67,7 @@ export class Column {
             'json': 'JSON',
             'number': 'Float',
             'numeric': 'Float',
+            'point': 'String',
             'smallint': 'Int',
             'text': 'String',
             'time': 'String',
