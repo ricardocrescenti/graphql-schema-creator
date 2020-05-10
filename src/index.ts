@@ -133,7 +133,7 @@ export class GraphQLSchema {
 
         /// set mutation function to insert/update row of single foreign key record associated
         /// with row of current table
-        table.columns[foreignKeyName].mutation = referencedTable.mutations[referencedTable.typeName.toLowerCase()];
+        table.columns[foreignKeyName].mutation = referencedTable.mutations[referencedTypeName.toLowerCase()];
         
         
         /// REFERENCED TABLE
