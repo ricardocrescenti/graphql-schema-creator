@@ -15,7 +15,7 @@ export declare class Resolver {
     after: ResolverAfterEvent[];
     constructor(table: Table, name: string, type: string, args: IResolverArg[], returnType: string, returnMany: boolean, resolver: ResolverFunction);
     getArgsDefs(): string;
-    execute(request: ResolverRequest): any;
+    execute(request: ResolverRequest): Promise<any>;
 }
 export interface IResolverArg {
     name: string;

@@ -37,12 +37,12 @@ export class Resolver {
       return '';
     }
   
-    public execute(request: ResolverRequest): any {
+    public async execute(request: ResolverRequest): Promise<any> {
       this.before.forEach((event) => {
         event(request);
       });
   
-      const result: any = this.resolver(request);
+      const result: any = await this.resolver(request);
       
       this.after.forEach((event) => {
         event(request, result);
